@@ -1,3 +1,16 @@
 <div class="container">
-  List of restaurants will be displayed here
+  <table>
+    <tr>
+      <th>NAME</th>
+      <th>GENRE</th>
+      <th>CITY</th>
+      <th>ADDRESS</th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants">
+      <td>{{restaurant.name}}</td>
+      <td>{{restaurant.genre}}</td>
+      <td>{{restaurant.city}}</td>
+      <td>{{restaurant.address}}</td>
+    </tr>
+  </table>
 </div>
