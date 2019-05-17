@@ -9,11 +9,14 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class RestaurantService {
+export class LuffleService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http : HttpClient) { }
 
   getRestaurants(){
     return this.http.get('/server/restaurants');
+  }
+  getReviews(){
+    return this.http.get('/server/reviews');
   }
 }

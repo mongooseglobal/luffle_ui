@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestaurantService }from '../../services/restaurant.service';
+import { LuffleService } from '../../services/luffle.service';
 
 @Component({
   selector: 'app-restaurants',
@@ -9,14 +9,14 @@ import { RestaurantService }from '../../services/restaurant.service';
 export class RestaurantsComponent implements OnInit {
   public restaurants;
 
-  constructor(private restaurantService : RestaurantService) { }
+  constructor(private luffleService : LuffleService) { }
 
   ngOnInit() {
     this.getRestaurants();
   }
 
   getRestaurants(){
-    this.restaurantService.getRestaurants().subscribe(
+    this.luffleService.getRestaurants().subscribe(
       data => { this.restaurants = data },
       err => console.error(err),
       () => console.log("Restaurants loaded...")

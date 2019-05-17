@@ -1,16 +1,18 @@
 <div class="container">
-  <table>
+  <table class="tableRestaurant">
     <tr>
       <th>NAME</th>
       <th>GENRE</th>
       <th>CITY</th>
       <th>ADDRESS</th>
+      <th>REVIEWS</th>
     </tr>
     <tr *ngFor="let restaurant of restaurants">
       <td>{{restaurant.name}}</td>
       <td>{{restaurant.genre}}</td>
       <td>{{restaurant.city}}</td>
       <td>{{restaurant.address}}</td>
+      <td><button type="submit" name="button">View All</button></td>
     </tr>
   </table>
 </div>
